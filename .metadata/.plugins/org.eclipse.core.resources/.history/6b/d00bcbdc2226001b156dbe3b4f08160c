@@ -1,0 +1,35 @@
+package AtividadeAvaliativaN3;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio8 {
+	public void loginsenhaEx8() {
+		String login="java8", senha="java8", ler;
+		try {
+			int contador=0;
+			while(contador < 3) {
+				if(login.equals("java8") && senha.equals("java8")) {
+					JOptionPane.showMessageDialog(null, "Login e senhas aceitos");
+				}
+				do {
+					ler = JOptionPane.showInputDialog("Forneça o login");
+					login = ler;
+					ler = JOptionPane.showInputDialog("Forneça a senha");
+					senha = ler;
+					contador++;
+					JOptionPane.showMessageDialog(null, "Falha verifique login e senha");
+					JOptionPane.showMessageDialog(null, "Voce tem mais " + (contador -3) + " tentativas");
+					
+					
+					
+				}while (!login.equals("java8") && !senha.equals("java8"));
+				
+			}
+			
+		}catch(Exception e) {
+			
+		}finally {
+			JOptionPane.showMessageDialog(null, "Fim da Execução");
+		}
+	}
+}
